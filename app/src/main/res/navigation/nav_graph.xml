@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentFavorite">
+
+    <fragment
+        android:id="@+id/fragmentFavorite"
+        android:name="com.ya.weatherapp.ui.fragment.favorite.FragmentFavorite"
+        android:label="FragmentFavorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_fragmentFavorite_to_fragmentLocation"
+            app:destination="@id/fragmentLocation" />
+        <action
+            android:id="@+id/action_fragmentFavorite_to_fragmentFuture"
+            app:destination="@id/fragmentFuture" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLocation"
+        android:name="com.ya.weatherapp.ui.fragment.location.FragmentLocation"
+        android:label="FragmentLocation"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/fragmentFuture"
+        android:name="com.ya.weatherapp.ui.fragment.future.FragmentFuture"
+        android:label="FragmentFuture"
+        tools:layout="@layout/fragment_future" />
+</navigation>
